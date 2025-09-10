@@ -1,0 +1,33 @@
+[2025-09-05 13:20:59] [INFO] Conexão com banco de dados estabelecida
+[2025-09-05 13:20:59] [INFO] Validando token de acesso...
+[2025-09-05 13:20:59] [INFO] Token válido para usuário: José Ricardo Santos
+[2025-09-05 13:20:59] [INFO] Obtendo token de longa duração...
+[2025-09-05 13:21:00] [INFO] Token de longa duração obtido (expira em 5184000 segundos)
+[2025-09-05 13:21:00] [INFO] Buscando contas Instagram conectadas...
+[2025-09-05 13:21:02] [INFO] Verificando página: Ela Decora
+[2025-09-05 13:21:05] [ERROR] Erro ao coletar insights: Falha na chamada da API: https://graph.facebook.com/v23.0/17841415250388479/insights?metric=reach%2Cfollower_count%2Cviews&period=total_value&since=2025-08-27&until=2025-09-02&access_token=EAAHrOfpMMsQBPQOB6C25Hz2Q2B05gSTBGoSt29GC0f2LgsCchrkovQoUyrjoi8GtRL2IfoNB2oNUxKZCZAAjwRxbLCYnW9HZBBQ2ETlahjiZAZB3iKGmzdAx4UAYydfrHRUV3DdVBNXH3rfbrW4mupi9K7zolGhWcVuU1XdhlfN6bLM9RRPtGzalceKQzv59h3aGCtmbh
+[2025-09-05 13:21:07] [INFO] ✅ Conta Instagram encontrada: @eladecora (2296468 seguidores)
+[2025-09-05 13:21:07] [INFO] Total de contas Instagram encontradas: 1
+[2025-09-05 13:21:07] [INFO] Inserindo conta no banco: @eladecora
+[2025-09-05 13:21:07] [INFO] ✅ Conta inserida/atualizada com sucesso: @eladecora
+[2025-09-05 13:21:07] [INFO] Testando coleta de dados para user_id: 17841415250388479
+[2025-09-05 13:21:08] [ERROR] Erro de rede ao testar coleta de insights
+[2025-09-05 13:29:39] [INFO] Conexão com banco de dados estabelecida
+[2025-09-05 13:29:52] [INFO] Validando token de acesso...
+[2025-09-05 13:30:03] [INFO] Token válido para usuário: José Ricardo Santos
+[2025-09-05 13:30:13] [INFO] Obtendo token de longa duração...
+[2025-09-05 13:30:32] [INFO] Token de longa duração obtido (expira em 5184000 segundos)
+[2025-09-05 13:30:40] [INFO] Buscando contas Instagram conectadas...
+[2025-09-05 13:30:53] [INFO] Verificando página: Ela Decora
+[2025-09-05 13:31:36] [ERROR] Erro ao coletar insights: Falha na chamada da API: https://graph.facebook.com/v23.0/17841415250388479/insights?metric=reach%2Cfollower_count%2Cviews&period=total_value&since=2025-08-27&until=2025-09-02&access_token=EAAHrOfpMMsQBPeYq9uUZAnuW0hiz10zQsFBReHIXYTXsYWqZBD8eoX9yIH3VXotaPsydon1Er8NWdPZAAcz9jbIpCZAw7DxMwx24R7f3z9lM9kZBbphdibZA4r6kbXZAZBjjd7vLEgXxWixlqZC0CRSNxqGLAw9h0PuAMyLNFRGmPNOTszZBZAnj1W7Xr1jAK3i1bzAKY6I
+[2025-09-05 13:32:00] [INFO] ✅ Conta Instagram encontrada: @eladecora (2296474 seguidores)
+[2025-09-05 13:32:04] [INFO] Total de contas Instagram encontradas: 1
+[2025-09-05 13:32:12] [INFO] Inserindo conta no banco: @eladecora
+[2025-09-05 13:32:24] [INFO] ✅ Conta inserida/atualizada com sucesso: @eladecora
+[2025-09-05 13:32:31] [INFO] Testando coleta de dados para user_id: 17841415250388479
+[2025-09-05 13:32:38] [ERROR] Erro de rede ao testar coleta de insights
+[2025-09-05 13:43:27] [INFO] Conexão com banco de dados estabelecida
+[2025-09-05 13:44:20] [INFO] Validando token de acesso...
+[2025-09-05 13:44:39] [INFO] Token válido para usuário: José Ricardo Santos
+[2025-09-05 13:44:45] [INFO] Obtendo token de longa duração...
+[2025-09-05 13:45:31] [INFO] Token de longa duração obtido (expira em 5184000 segundos)

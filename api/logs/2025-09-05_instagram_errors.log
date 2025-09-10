@@ -1,0 +1,16 @@
+[2025-09-05 20:02:30] ERROR: Erro ao carregar token do banco: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'eladec62_tbs.instagram_tokens' doesn't exist
+[2025-09-05 20:03:08] ERROR: Erro ao carregar token do banco: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'eladec62_tbs.instagram_tokens' doesn't exist
+[2025-09-05 20:04:07] ERROR: Erro ao carregar token do banco: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'eladec62_tbs.instagram_tokens' doesn't exist
+[2025-09-05 20:25:12] ERROR: Erro ao carregar token do banco: Erro de conexão com o banco: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2025-09-05 21:15:15] ERROR: Erro ao buscar insights da conta: Erro da API (400): (#100) The following periods (week) are incompatible with the metric (follower_count)
+[2025-09-05 21:20:45] ERROR: Erro ao buscar insights da conta: Erro da API (400): (#100) The following periods (week) are incompatible with the metric (follower_count)
+[2025-09-05 21:43:40] ERROR: Token de acesso expirado ou inválido
+[2025-09-05 21:43:40] ERROR: Erro ao buscar insights da conta: Erro da API (400): Invalid OAuth access token - Cannot parse access token
+[2025-09-05 21:43:41] ERROR: Token de acesso expirado ou inválido
+[2025-09-05 21:43:41] ERROR: Erro ao buscar insights da conta: Erro da API (400): Invalid OAuth access token - Cannot parse access token
+[2025-09-05 21:44:05] ERROR: Token de acesso expirado ou inválido
+[2025-09-05 21:44:05] ERROR: Erro ao buscar insights da conta: Erro da API (400): Invalid OAuth access token - Cannot parse access token
+[2025-09-05 21:44:05] ERROR: Token de acesso expirado ou inválido
+[2025-09-05 21:44:05] ERROR: Erro ao buscar insights da conta: Erro da API (400): Invalid OAuth access token - Cannot parse access token
+[2025-09-05 21:45:08] ERROR: Erro ao buscar insights da conta: Erro da API (400): Unsupported get request. Object with ID 'EAAHrOfpMMsQBPTAwlf3MwlVk13WYdTxC7X7PfAvr49brkKa1ZCvdmt7WILMgHHyEN26ZAm0Sj7mtZA2YHt05mSehDjUG3MMSJm0djD02P1jUgUG6Hw2bSXZBwXutYAwy7yNYspHciUH5fC4ZCYU2GAoCPO3iLYlUwolz4v3hOfqwTENjMPPkRa4HXRGtP2ifU' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api
+[2025-09-05 21:45:08] ERROR: Erro ao buscar insights da conta: Erro da API (400): Unsupported get request. Object with ID 'EAAHrOfpMMsQBPTAwlf3MwlVk13WYdTxC7X7PfAvr49brkKa1ZCvdmt7WILMgHHyEN26ZAm0Sj7mtZA2YHt05mSehDjUG3MMSJm0djD02P1jUgUG6Hw2bSXZBwXutYAwy7yNYspHciUH5fC4ZCYU2GAoCPO3iLYlUwolz4v3hOfqwTENjMPPkRa4HXRGtP2ifU' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api

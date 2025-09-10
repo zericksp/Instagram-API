@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Insights - Configuração</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .step {
+            margin-bottom: 40px;
+            padding: 30px;
+            border: 2px solid #f0f2f5;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .step:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 16px rgba(102, 126, 234, 0.1);
+        }
+        
+        .step-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .step-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .step-content {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e1e8ed;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn:hover {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+        }
+        
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+        }
+        
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+        
+        .alert {
+            padding: 16px 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 4px solid;
+        }
+        
+        .alert-success {
+            background: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+        
+        .alert-error {
+            background: #f8d7da;
+            border-color: #dc3545;
+            color: #721c24;
+        }
+        
+        .alert-warning {
+            background: #fff3cd;
+            border-color: #ffc107;
+            color: #856404;
+        }
+        
+        .alert-info {
+            background: #cce7ff;
+            border-color: #007bff;
+            color: #004085;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .loading.show {
+            display: block;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            padding: 15px;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.9rem;
+            color: #495057;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        
+        .account-card {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .account-info h4 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .account-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .status-success {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .status-error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Instagram Insights</h1>
+            <p>Configuração Automática do Sistema de Coleta</p>
+        </div>
+        
+        <div class="content">
+            <!-- Passo 1: Configuração da API -->
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Configurar App no Meta for Developers</div>
+                </div>
+                <div class="step-content">
+                    <p>Antes de começar, você precisa:</p>
+                    <ol style="margin: 15px 0 15px 30px; line-height: 1.8;">
+                        <li>Criar um app no <a href="https://developers.facebook.com/" target="_blank" style="color: #667eea;">Meta for Developers</a></li>
+                        <li>Adicionar o produto "Instagram Graph API"</li>
+                        <li>Conectar sua conta Instagram Business a uma página do Facebook</li>
+                        <li>Obter um User Access Token com as permissões necessárias</li>
+                    </ol>
+                    
+                    <div class="alert alert-info">
+                        <strong>💡 Dica:</strong> Use o <a href="https://developers.facebook.com/tools/explorer/" target="_blank" style="color: #004085;">Graph API Explorer</a> para obter o token rapidamente.
+                        <br><strong>Permissões necessárias:</strong> instagram_basic, instagram_manage_insights, pages_show_list, pages_read_engagement
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Passo 2: Inserir Token -->
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Configurar Acesso à API</div>
+                </div>
+                <div class="step-content">
+                    <form id="setupForm">
+                        <div class="form-group">
+                            <label class="form-label" for="userToken">User Access Token</label>
+                            <input 
+                                type="text" 
+                                id="userToken" 
+                                name="userToken" 
+                                class="form-input"
+                                placeholder="EAABwzLixnjYBAXXX..."
+                                required
+                            >
+                            <small style="color: #666; font-size: 0.85rem;">
+                                Cole aqui o token obtido do Graph API Explorer
+                            </small>
+                        </div>
+                        
+                        <button type="submit" class="btn" id="setupBtn">
+                            <span>🔍</span>
+                            Descobrir e Configurar Contas
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Loading -->
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Descobrindo contas Instagram e configurando o sistema...</p>
+                <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">
+                    Isso pode levar alguns segundos...
+                </p>
+            </div>
+            
+            <!-- Resultados -->
+            <div id="results" style="display: none;"></div>
+            
+            <!-- Passo 3: Status -->
+            <div class="step" id="statusStep" style="display: none;">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Status do Sistema</div>
+                </div>
+                <div class="step-content" id="systemStatus">
+                    <!-- Status será carregado dinamicamente -->
+                </div>
+            </div>
+            
+            <!-- Passo 4: Próximos Passos -->
+            <div class="step" id="nextStepsStep" style="display: none;">
+                <div class="step-header">
+                    <div class="step-number">4</div>
+                    <div class="step-title">Próximos Passos</div>
+                </div>
+                <div class="step-content">
+                    <p>Sistema configurado com sucesso! Agora você precisa:</p>
+                    
+                    <h4 style="margin: 20px 0 10px 0; color: #2c3e50;">📅 Configurar Coleta Automática (Cron)</h4>
+                    <p>Adicione essas linhas ao seu crontab (<code>crontab -e</code>):</p>
+                    <div class="code-block">
+# Coleta de insights a cada 10 minutos
+*/10 * * * * php /var/www/instagram_insights/instagram_insights_cron.php
+
+# Detecção de anomalias a cada hora
+0 * * * * php /var/www/instagram_insights/analyze_anomalies.php
+
+# Limpeza diária às 3h
+0 3 * * * mysql -u instagram_user -p'senha' instagram_insights -e "CALL CleanupOldData();"
+                    </div>
+                    
+                    <h4 style="margin: 20px 0 10px 0; color: #2c3e50;">📊 Monitoramento</h4>
+                    <p>Monitore o sistema através de:</p>
+                    <ul style="margin: 10px 0 10px 30px; line-height: 1.6;">
+                        <li>Logs em <code>/logs/</code></li>
+                        <li>Consultas SQL nas views criadas</li>
+                        <li>Tabela <code>instagram_alerts</code> para anomalias</li>
+                    </ul>
+                    
+                    <div style="margin-top: 30px;">
+                        <button class="btn" onclick="location.reload()">
+                            <span>🔄</span>
+                            Configurar Nova Conta
+                        </button>
+                        
+                        <button class="btn btn-secondary" onclick="showSystemStatus()" style="margin-left: 10px;">
+                            <span>📊</span>
+                            Ver Status
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('setupForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const userToken = document.getElementById('userToken').value.trim();
+            
+            if (!userToken) {
+                showAlert('Por favor, insira o User Access Token.', 'error');
+                return;
+            }
+            
+            // Mostrar loading
+            document.getElementById('loading').classList.add('show');
+            document.getElementById('setupBtn').disabled = true;
+            document.getElementById('results').style.display = 'none';
+            
+            try {
+                const response = await fetch('setup_handler.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        action: 'setup',
+                        userToken: userToken
+                    })
+                });
+                
+                const data = await response.json();
+                
+                // Ocultar loading
+                document.getElementById('loading').classList.remove('show');
+                document.getElementById('setupBtn').disabled = false;
+                
+                if (data.success) {
+                    showResults(data);
+                    showNextSteps();
+                } else {
+                    showAlert(data.message || 'Erro na configuração', 'error');
+                }
+                
+            } catch (error) {
+                document.getElementById('loading').classList.remove('show');
+                document.getElementById('setupBtn').disabled = false;
+                showAlert('Erro de conexão: ' + error.message, 'error');
+            }
+        });
+        
+        function showAlert(message, type) {
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type}`;
+            alertDiv.innerHTML = message;
+            
+            // Inserir antes do formulário
+            const form = document.getElementById('setupForm');
+            form.parentNode.insertBefore(alertDiv, form);
+            
+            // Remover após 5 segundos
+            setTimeout(() => {
+                alertDiv.remove();
+            }, 5000);
+        }
+        
+        function showResults(data) {
+            const resultsDiv = document.getElementById('results');
+            let html = '';
+            
+            if (data.accounts && data.accounts.length > 0) {
+                html += '<div class="alert alert-success">';
+                html += `<strong>🎉 Sucesso!</strong> ${data.accounts.length} conta(s) Instagram configurada(s) com sucesso.`;
+                html += '</div>';
+                
+                html += '<h4 style="margin-bottom: 15px; color: #2c3e50;">Contas Configuradas:</h4>';
+                
+                data.accounts.forEach(account => {
+                    html += `
+                        <div class="account-card">
+                            <div style="font-size: 2rem;">📸</div>
+                            <div class="account-info" style="flex: 1;">
+                                <h4>@${account.username}</h4>
+                                <p>${account.followers_count.toLocaleString()} seguidores • ${account.account_type}</p>
+                            </div>
+                            <span class="status-badge status-success">✅ Ativo</span>
+                        </div>
+                    `;
+                });
+            }
+            
+            if (data.errors && data.errors.length > 0) {
+                html += '<div class="alert alert-warning">';
+                html += '<strong>⚠️ Alguns problemas encontrados:</strong><ul>';
+                data.errors.forEach(error => {
+                    html += `<li>${error}</li>`;
+                });
+                html += '</ul></div>';
+            }
+            
+            resultsDiv.innerHTML = html;
+            resultsDiv.style.display = 'block';
+        }
+        
+        function showNextSteps() {
+            document.getElementById('nextStepsStep').style.display = 'block';
+            
+            // Scroll suave para os próximos passos
+            setTimeout(() => {
+                document.getElementById('nextStepsStep').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }, 500);
+        }
+        
+        async function showSystemStatus() {
+            document.getElementById('statusStep').style.display = 'block';
+            
+            try {
+                const response = await fetch('setup_handler.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        action: 'status'
+                    })
+                });
+                
+                const data = await response.json();
+                
+                let html = '';
+                
+                if (data.accounts) {
+                    html += '<h4 style="margin-bottom: 15px;">Contas Monitoradas:</h4>';
+                    
+                    data.accounts.forEach(account => {
+                        const statusClass = account.status.includes('✅') ? 'status-success' : 
+                                           account.status.includes('⚠️') ? 'status-warning' : 'status-error';
+                        
+                        html += `
+                            <div class="account-card">
+                                <div style="font-size: 2rem;">📸</div>
+                                <div class="account-info" style="flex: 1;">
+                                    <h4>@${account.account_name}</h4>
+                                    <p>${account.follower_count.toLocaleString()} seguidores</p>
+                                    <p style="font-size: 0.8rem; color: #999;">
+                                        Última coleta: ${account.last_collected || 'Nunca'}
+                                    </p>
+                                </div>
+                                <span class="status-badge ${statusClass}">${account.status}</span>
+                            </div>
+                        `;
+                    });
+                }
+                
+                if (data.stats) {
+                    html += '<div style="margin-top: 25px;">';
+                    html += '<h4 style="margin-bottom: 15px;">Estatísticas:</h4>';
+                    html += `<p>📊 Métricas coletadas hoje: <strong>${data.stats.metricas_hoje}</strong></p>`;
+                    html += `<p>🚨 Alertas ativos: <strong>${data.stats.alertas_ativos}</strong></p>`;
+                    html += '</div>';
+                }
+                
+                document.getElementById('systemStatus').innerHTML = html;
+                
+                document.getElementById('statusStep').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+            } catch (error) {
+                showAlert('Erro ao carregar status: ' + error.message, 'error');
+            }
+        }
+    </script>
+</body>
+</html>

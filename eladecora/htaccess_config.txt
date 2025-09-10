@@ -1,0 +1,136 @@
+# Instagram Insights - Configuração Apache
+# Coloque este arquivo como .htaccess na raiz do projeto
+
+# Habilitar reescrita de URL
+RewriteEngine On
+
+# Proteger arquivos sensíveis
+<FilesMatch "\.(env|log|sql|md)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Proteger diretório de logs
+<Directory "logs/">
+    Order allow,deny
+    Deny from all
+</Directory>
+
+# Proteger arquivos PHP de configuração
+<FilesMatch "(config|setup|cron)\.php$">
+    Order allow,deny
+    Deny from all
+    # Permitir apenas para localhost em desenvolvimento
+    Allow from 127.0.0.1
+    Allow from ::1
+</FilesMatch>
+
+# Permitir acesso aos arquivos web necessários
+<FilesMatch "(instagram_web_setup\.html|quick_test_web\.html|setup_handler\.php)$">
+    Order allow,deny
+    Allow from all
+</FilesMatch>
+
+# Headers de segurança
+<IfModule mod_headers.c>
+    # Prevenir XSS
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # CORS para AJAX (apenas para setup)
+    <Files "setup_handler.php">
+        Header always set Access-Control-Allow-Origin "*"
+        Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS"
+        Header always set Access-Control-Allow-Headers "Content-Type"
+    </Files>
+</IfModule>
+
+# Compressão para melhor performance
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Cache para arquivos estáticos
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# Página de erro personalizada (opcional)
+ErrorDocument 403 /403.html
+ErrorDocument 404 /404.html
+
+# Redirecionamentos úteis
+# Redirecionar raiz para interface de setup
+DirectoryIndex instagram_web_setup.html index.html index.php
+
+# Regras de reescrita
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirecionar /setup para interface web
+RewriteRule ^setup/?$ instagram_web_setup.html [L]
+
+# Redirecionar /test para teste rápido
+RewriteRule ^test/?$ quick_test_web.html [L]
+
+# Bloquear tentativas de acesso direto a scripts de cron
+RewriteRule ^.*_cron\.php$ - [F,L]
+
+# Log personalizado (se suportado)
+<IfModule mod_log_config.c>
+    LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" instagram_combined
+    # CustomLog logs/access.log instagram_combined
+</IfModule>
+
+# Configurações PHP específicas (se permitido)
+<IfModule mod_php.c>
+    php_value upload_max_filesize 10M
+    php_value post_max_size 10M
+    php_value memory_limit 256M
+    php_value max_execution_time 300
+    
+    # Logs PHP
+    php_flag log_errors On
+    php_value error_log "logs/php_errors.log"
+    
+    # Desabilitar expose_php para segurança
+    php_flag expose_php Off
+</IfModule>
+
+# Configurações de MIME type
+<IfModule mod_mime.c>
+    AddType application/javascript .js
+    AddType text/css .css
+    AddType application/json .json
+</IfModule>
+
+# Configurações para diferentes ambientes
+<IfModule mod_setenvif.c>
+    # Detectar ambiente de desenvolvimento
+    SetEnvIf Remote_Addr "^127\.0\.0\.1$" development
+    SetEnvIf Remote_Addr "^::1$" development
+    
+    # Headers específicos para desenvolvimento
+    <If "env('development')">
+        Header always set X-Debug-Mode "on"
+    </If>
+</IfModule>
+
+# Comentários para referência:
+# 
+# Este arquivo .htaccess:
+# 1. Protege arquivos sensíveis (.env, logs, etc.)
+# 2. Adiciona headers de segurança
+# 3. Habilita compressão e cache
+# 4. Configura redirecionamentos úteis
+# 5. Bloqueia acesso direto a scripts de cron
+# 6. Permite CORS apenas para setup_handler.php
+# 
+# Para usar:
+# 1. Salve como .htaccess na raiz do projeto
+# 2. Certifique-se que mod_rewrite está habilitado
+# 3. Ajuste permissões conforme necessário

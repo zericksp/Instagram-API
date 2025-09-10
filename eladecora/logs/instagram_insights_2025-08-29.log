@@ -1,0 +1,102 @@
+[2025-08-29 00:07:41] [INFO] Starting Instagram Insights collection
+[2025-08-29 00:07:42] [INFO] Found 2 accounts to process
+[2025-08-29 00:07:42] [INFO] Processing account: Minha Empresa (ID: 17841405726653026)
+[2025-08-29 00:07:42] [INFO] Collecting profile insights for user: 17841405726653026
+[2025-08-29 00:07:42] [ERROR] Error collecting profile insights for user 17841405726653026: Failed to fetch data from Instagram API
+[2025-08-29 00:07:45] [ERROR] Error collecting posts insights for user 17841405726653026: Failed to fetch data from Instagram API
+[2025-08-29 00:07:54] [INFO] Processing account: Conta Secundária (ID: 17841405726653027)
+[2025-08-29 00:07:54] [INFO] Collecting profile insights for user: 17841405726653027
+[2025-08-29 00:07:54] [ERROR] Error collecting profile insights for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:08:46] [INFO] Starting Instagram Insights collection
+[2025-08-29 00:08:46] [INFO] Found 2 accounts to process
+[2025-08-29 00:08:46] [INFO] Processing account: Minha Empresa (ID: 17841405726653026)
+[2025-08-29 00:08:47] [INFO] Collecting profile insights for user: 17841405726653026
+[2025-08-29 00:08:47] [ERROR] Error collecting profile insights for user 17841405726653026: Failed to fetch data from Instagram API
+[2025-08-29 00:08:50] [ERROR] Error collecting posts insights for user 17841405726653026: Failed to fetch data from Instagram API
+[2025-08-29 00:08:58] [INFO] Processing account: Conta Secundária (ID: 17841405726653027)
+[2025-08-29 00:08:59] [INFO] Collecting profile insights for user: 17841405726653027
+[2025-08-29 00:08:59] [ERROR] Error collecting profile insights for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:09:02] [ERROR] Error collecting posts insights for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:09:06] [INFO] Collecting demographics for user: 17841405726653027
+[2025-08-29 00:09:06] [ERROR] Error collecting demographics for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:09:11] [INFO] Instagram Insights collection completed. Success: 0, Errors: 2
+[2025-08-29 00:09:21] [INFO] Starting Instagram Insights collection
+[2025-08-29 00:09:21] [INFO] Found 2 accounts to process
+[2025-08-29 00:09:21] [INFO] Processing account: Minha Empresa (ID: 17841405726653026)
+[2025-08-29 00:09:22] [INFO] Collecting profile insights for user: 17841405726653026
+[2025-08-29 00:09:22] [ERROR] Error collecting profile insights for user 17841405726653026: Failed to fetch data from Instagram API
+[2025-08-29 00:09:25] [ERROR] Error collecting posts insights for user 17841405726653026: Failed to fetch data from Instagram API
+[2025-08-29 00:09:27] [INFO] Starting Instagram Insights collection
+[2025-08-29 00:09:27] [INFO] Found 2 accounts to process
+[2025-08-29 00:09:27] [INFO] Processing account: Minha Empresa (ID: 17841405726653026)
+[2025-08-29 00:09:28] [INFO] Collecting profile insights for user: 17841405726653026
+[2025-08-29 00:09:28] [ERROR] Error collecting profile insights for user 17841405726653026: Failed to fetch data from Instagram API
+[2025-08-29 00:09:32] [INFO] Starting Instagram Insights collection
+[2025-08-29 00:09:32] [INFO] Found 2 accounts to process
+[2025-08-29 00:09:32] [INFO] Processing account: Minha Empresa (ID: 17841405726653026)
+[2025-08-29 00:09:32] [INFO] Collecting profile insights for user: 17841405726653026
+[2025-08-29 00:09:33] [ERROR] Error collecting profile insights for user 17841405726653026: Failed to fetch data from Instagram API
+[2025-08-29 00:09:33] [INFO] Processing account: Conta Secundária (ID: 17841405726653027)
+[2025-08-29 00:09:34] [INFO] Collecting profile insights for user: 17841405726653027
+[2025-08-29 00:09:34] [ERROR] Error collecting profile insights for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:09:36] [ERROR] Error collecting posts insights for user 17841405726653026: Failed to fetch data from Instagram API
+[2025-08-29 00:09:37] [ERROR] Error collecting posts insights for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:09:41] [INFO] Collecting demographics for user: 17841405726653027
+[2025-08-29 00:09:41] [ERROR] Error collecting demographics for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:09:44] [INFO] Processing account: Conta Secundária (ID: 17841405726653027)
+[2025-08-29 00:09:44] [INFO] Collecting profile insights for user: 17841405726653027
+[2025-08-29 00:09:45] [ERROR] Error collecting profile insights for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:09:46] [INFO] Instagram Insights collection completed. Success: 0, Errors: 2
+[2025-08-29 00:09:48] [ERROR] Error collecting posts insights for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:09:49] [INFO] Starting Instagram Insights collection
+[2025-08-29 00:09:50] [INFO] Found 2 accounts to process
+[2025-08-29 00:09:50] [INFO] Processing account: Minha Empresa (ID: 17841405726653026)
+[2025-08-29 00:09:50] [INFO] Collecting profile insights for user: 17841405726653026
+[2025-08-29 00:09:50] [INFO] Starting Instagram Insights collection
+[2025-08-29 00:09:50] [ERROR] Error collecting profile insights for user 17841405726653026: Failed to fetch data from Instagram API
+[2025-08-29 00:09:50] [INFO] Found 2 accounts to process
+[2025-08-29 00:09:50] [INFO] Processing account: Minha Empresa (ID: 17841405726653026)
+[2025-08-29 00:09:51] [INFO] Collecting profile insights for user: 17841405726653026
+[2025-08-29 00:09:51] [ERROR] Error collecting profile insights for user 17841405726653026: Failed to fetch data from Instagram API
+[2025-08-29 00:09:53] [ERROR] Error collecting posts insights for user 17841405726653026: Failed to fetch data from Instagram API
+[2025-08-29 00:09:54] [ERROR] Error collecting posts insights for user 17841405726653026: Failed to fetch data from Instagram API
+[2025-08-29 00:10:01] [INFO] Processing account: Conta Secundária (ID: 17841405726653027)
+[2025-08-29 00:10:02] [INFO] Collecting profile insights for user: 17841405726653027
+[2025-08-29 00:10:02] [ERROR] Error collecting profile insights for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:10:02] [INFO] Processing account: Conta Secundária (ID: 17841405726653027)
+[2025-08-29 00:10:03] [INFO] Collecting profile insights for user: 17841405726653027
+[2025-08-29 00:10:03] [ERROR] Error collecting profile insights for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:10:05] [ERROR] Error collecting posts insights for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:10:06] [ERROR] Error collecting posts insights for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:10:09] [INFO] Collecting demographics for user: 17841405726653027
+[2025-08-29 00:10:09] [ERROR] Error collecting demographics for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:10:10] [INFO] Collecting demographics for user: 17841405726653027
+[2025-08-29 00:10:10] [ERROR] Error collecting demographics for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:10:14] [INFO] Instagram Insights collection completed. Success: 0, Errors: 2
+[2025-08-29 00:10:15] [INFO] Instagram Insights collection completed. Success: 0, Errors: 2
+[2025-08-29 00:11:06] [INFO] Starting Instagram Insights collection
+[2025-08-29 00:11:06] [INFO] Found 2 accounts to process
+[2025-08-29 00:11:06] [INFO] Processing account: Minha Empresa (ID: 17841405726653026)
+[2025-08-29 00:11:07] [INFO] Collecting profile insights for user: 17841405726653026
+[2025-08-29 00:11:07] [ERROR] Error collecting profile insights for user 17841405726653026: Failed to fetch data from Instagram API
+[2025-08-29 00:11:10] [ERROR] Error collecting posts insights for user 17841405726653026: Failed to fetch data from Instagram API
+[2025-08-29 00:11:18] [INFO] Processing account: Conta Secundária (ID: 17841405726653027)
+[2025-08-29 00:11:19] [INFO] Collecting profile insights for user: 17841405726653027
+[2025-08-29 00:11:19] [ERROR] Error collecting profile insights for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:11:22] [ERROR] Error collecting posts insights for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:11:26] [INFO] Collecting demographics for user: 17841405726653027
+[2025-08-29 00:11:26] [ERROR] Error collecting demographics for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:11:31] [INFO] Instagram Insights collection completed. Success: 0, Errors: 2
+[2025-08-29 00:11:43] [INFO] Starting Instagram Insights collection
+[2025-08-29 00:11:49] [INFO] Found 2 accounts to process
+[2025-08-29 00:11:51] [INFO] Processing account: Minha Empresa (ID: 17841405726653026)
+[2025-08-29 00:11:52] [INFO] Collecting profile insights for user: 17841405726653026
+[2025-08-29 00:11:53] [ERROR] Error collecting profile insights for user 17841405726653026: Failed to fetch data from Instagram API
+[2025-08-29 00:11:59] [ERROR] Error collecting posts insights for user 17841405726653026: Failed to fetch data from Instagram API
+[2025-08-29 00:12:18] [INFO] Processing account: Conta Secundária (ID: 17841405726653027)
+[2025-08-29 00:12:21] [INFO] Collecting profile insights for user: 17841405726653027
+[2025-08-29 00:12:21] [ERROR] Error collecting profile insights for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:12:24] [ERROR] Error collecting posts insights for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:12:30] [INFO] Collecting demographics for user: 17841405726653027
+[2025-08-29 00:12:31] [ERROR] Error collecting demographics for user 17841405726653027: Failed to fetch data from Instagram API
+[2025-08-29 00:12:36] [INFO] Instagram Insights collection completed. Success: 0, Errors: 2
